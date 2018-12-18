@@ -7,6 +7,7 @@ import './index.css'
 
 ReactDOM.render(
     <Provider store={store}>
+    <div>Hello World</div>
     </Provider>,
     document.getElementById('app')
 )

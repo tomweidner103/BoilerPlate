@@ -1,20 +1,24 @@
-const path = require('path');
+'use strict'
+
+const { resolve } = require('path')
 
 module.exports = {
-  entry: ['babel-polyfill', './client/index.js'],
+  entry: ['babel-polyfill', './client/index'],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
   mode: 'development',
+  context: __dirname,
   devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'client')
-        ],
+        test: /jsx?$/,
+        include: resolve(__dirname, './client'),
         loader: 'babel-loader'
       },
       {
@@ -26,4 +30,4 @@ module.exports = {
       }
     ]
   }
-};
+}
