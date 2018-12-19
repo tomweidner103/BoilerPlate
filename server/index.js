@@ -85,7 +85,7 @@ app.use((err, req, res, next) => {
 // db.sync({force:true}).then(() => {
 db.sync().then(() => {
     console.log('db synced up')
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 3500;
   app.listen(port, () => {
     console.log('Knock, knock');
     console.log("who's there?");
