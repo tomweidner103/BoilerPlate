@@ -2,7 +2,7 @@ const router = require('express').Router()
 
 // routes for each model
 
-// router.use()
+router.use('/users', require('./users'))
 // router.use()
 // router.use()
 
