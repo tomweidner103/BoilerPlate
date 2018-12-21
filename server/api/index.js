@@ -2,8 +2,7 @@ const router = require('express').Router()
 
 // routes for each model
 
-router.use('/users', require('./users'))
-// router.use()
+router.use('/auth', require('./auth'))
 // router.use()
 
 //error 404
