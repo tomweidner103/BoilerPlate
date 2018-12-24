@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const LocalLoginForm = props => {
   return (
@@ -10,6 +11,7 @@ const LocalLoginForm = props => {
         <input name='password' type='password' />
       </label>
       <button type='submit'>Login</button>
+      <button><Link to='/signup'>New User?</Link></button>
     </form>
   );
 };

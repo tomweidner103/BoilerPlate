@@ -6,6 +6,7 @@ import { HashRouter, withRouter, Switch, Route } from 'react-router-dom';
 import './index.css';
 import UserPage from './components/UserPage'
 import Loggin from './components/Loggin'
+import SignUpPage from './components/SignUpPage'
 import { getMe } from './reducers/userReducer';
 
 const Main = withRouter(class extends Component {
@@ -18,6 +19,7 @@ const Main = withRouter(class extends Component {
     return (
       <Switch>
         <Route path='/home' component={UserPage} />
+        <Route path='/signup' component={SignUpPage} />
         <Route component={Loggin} />
       </Switch>
     )
