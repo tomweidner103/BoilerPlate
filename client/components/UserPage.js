@@ -23,11 +23,10 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     async handleClick() {
       await dispatch(logout());
-      ownProps.history.push('/');
     }
   };
 };
